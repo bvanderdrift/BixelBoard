@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-// Source: https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/56de324afea13c4649b00ca8c3a3e3535d532bd4/contracts/token/ERC20/IERC20.sol
+// sourced from https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/56de324afea13c4649b00ca8c3a3e3535d532bd4/contracts/token/ERC20/IERC20.sol
 
-pragma solidity >=0.6.0;
+pragma solidity ^0.6.0;
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.

@@ -1,22 +1,23 @@
-pragma solidity >=0.4.22;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.22 <0.8.0;
 
-import "./ERC20Interface.sol";
-
-struct Bixel {
-    address owner;
-    uint8 red;
-    uint8 green;
-    uint8 blue;
-}
+import "./DAI_stub/IERC20.sol";
 
 contract BixelBoard {
+    struct Bixel {
+        address owner;
+        uint8 red;
+        uint8 green;
+        uint8 blue;
+    }
+
     uint256 public width = 1000;
     uint256 public height = 1000;
     uint256 public bixelStakeDAIValue = 1e18; // DAI has 18 decimals
     IERC20 public daiAddress;
     Bixel[1000][1000] public bixels; //height x width because in array definition the dimensions are inversed
 
-    constructor(IERC20 _daiAddress) {
+    constructor(IERC20 _daiAddress) public {
         daiAddress = _daiAddress;
     }
 
